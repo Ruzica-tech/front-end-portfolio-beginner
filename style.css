@@ -1,0 +1,47 @@
+body {
+    background-color: black;
+    color: aliceblue;
+}
+
+h1 {
+    font-size: 90px;
+    font-weight: normal;
+    font-family: "Fira Code", monospace;
+    text-align: center;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: normal;
+    font-family: "Fira Code", monospace;
+    text-align: center;
+}
+
+
+
+.centered-div {
+    margin: auto;
+    width: 1250px;
+}
+
+.description {
+    font-size: 25px;
+    font-weight: normal;
+    font-family: "Source Code Pro", monospace;
+    text-align: center;
+}
+
+.text-wrapper {
+    width: 1150px;
+}
+
+hr {
+    background-color: #41C256;
+    height: 1px;
+    border: none;
+}
+
+.TikTok {
+    padding-top: 30px;
+    padding-bottom: 40px;
+}

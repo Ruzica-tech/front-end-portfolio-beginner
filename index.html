@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My first HTML, CSS and JS portfolio</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+    <!-- Include the PDF.js and Mammoth.js libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.4.2/mammoth.browser.min.js"></script>
+
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About me</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+    <section id="hero">
+        <div class="centered-div">
+            <h1>Growing as a Front-end one code at a time</h1>
+            <br>
+            <div class="text-wrapper">
+                <p class="description">I will be making here all the complicated stuff that are styled on my own. Remember that I am just a beginner.</p>
+                <p class="description">Take a peak and enjoy.</p>
+                <br>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <section id="TikTok">
+        <div class="centered-div">
+            <p class="description">You can also visit my TikTok account: IT_chuckles where you can see and meet me more!</p>
+        </div>
+        <hr>
+    </section>
+    <section id="form">
+        <div class="centered-div">
+            <h2>1. IT Job application form</h2>
+        
+            <br>
+            <form action="https://httpbin.org/get" method="get">
+                <p><label for="name">Name*:</label>
+                <input type="text" id="name" name="name" placeholder="Jane" autocomplete="on" required autofocus></p>
+              
+
+                <p><label for="lastname">Last name*:</label>
+                <input type="text" id="lastname" name="lastname" placeholder="Doe" autocomplete="on" required></p>
+            
+                <p><label for="email">E-mail*</label>
+                <input type="email" id="email" name="email" placeholder="example@gmail.com" autocomplete="on" required></p>
+
+                <p><label for="phone">Phone*</label>
+                    <input type="tel" id="phone" name="phone" autocomplete="on" required></p>
+              
+
+                
+                <p><label for="cv"> Upload CV</label>
+                <input type="file" id="cv-file" accept=".pdf, .docx"></p>
+                
+                <p><label for="country">Choose your country:</label>
+                <select id="country" name="country"></p>
+                    <option value="">Select a country</option>
+                </select>
+                
+                <script>
+                    fetch('https://restcountries.com/v3.1/all')
+                        .then(response => response.json())
+                        .then(data => {
+                            const countrySelect = document.getElementById('country');
+                            data.forEach(country => {
+                                const option = document.createElement('option');
+                                option.value = country.cca2;
+                                option.textContent = country.name.common;
+                                countrySelect.appendChild(option);
+                            });
+                        });
+                </script>
+                <br>
+<p>
+<label for="options">Select the job you are applying for:</label>
+<select id="options">
+    <option value="option1">Front-end developer </option>
+    <option value="option2"> Webflow developer</option>
+    <option value="option2"> Internship </option>
+</select>
+</p>
+                <p><label for="options">Do you have experience with no-code tools?</label>
+                <select id="options">
+                    <option value="option1">Yes </option>
+                    <option value="option2">No</option>
+                </select>
+            </p>
+            <p><label for="options">Do you have web design experience?</label>
+                <select id="options">
+                    <option value="option1">Yes </option>
+                    <option value="option2">No</option>
+                </select>
+            </p>
+<p><label for="message"> Write short introduction about yourself: </label>
+    <br><br>
+<textarea name="message" id="message" cols="30" rows="10"></textarea></p>
+                
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+           </form>
+        </div>
+        <hr>
+    </section>
+</body>
+</html>
