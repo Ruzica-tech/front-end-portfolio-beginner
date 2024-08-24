@@ -14,18 +14,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
 
-    <!-- Include the PDF.js and Mammoth.js libraries -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.4.2/mammoth.browser.min.js"></script>
-
 </head>
 <body>
-    <nav>
-        <ul>
-            <li>Home</li>
-            <li>About me</li>
-            <li>Contact</li>
-        </ul>
+    <nav class="navbar">
+        <div class="navdiv">
+            <ul>
+            <li><a href="#"></a>Home</li>
+            <li><a href="#"></a>About me</li>
+            <li><a href="#"></a>Contact</li>
+            </ul>
+       </div>
     </nav>
     <section id="hero">
         <div class="centered-div">
@@ -52,41 +50,27 @@
             <br>
             <form action="https://httpbin.org/get" method="get">
                 <p><label for="name">Name*:</label>
-                <input type="text" id="name" name="name" placeholder="Jane" autocomplete="on" required autofocus></p>
+                <input type="text" id="name" name="name" placeholder="Jane" autocomplete="on" required></p>
               
 
                 <p><label for="lastname">Last name*:</label>
                 <input type="text" id="lastname" name="lastname" placeholder="Doe" autocomplete="on" required></p>
             
-                <p><label for="email">E-mail*</label>
+                <p><label for="email">E-mail*:</label>
                 <input type="email" id="email" name="email" placeholder="example@gmail.com" autocomplete="on" required></p>
 
-                <p><label for="phone">Phone*</label>
+                <p><label for="phone">Phone*:</label>
                     <input type="tel" id="phone" name="phone" autocomplete="on" required></p>
               
 
                 
-                <p><label for="cv"> Upload CV</label>
+                <p><label for="cv"> Upload CV:</label>
                 <input type="file" id="cv-file" accept=".pdf, .docx"></p>
                 
                 <p><label for="country">Choose your country:</label>
                 <select id="country" name="country"></p>
                     <option value="">Select a country</option>
                 </select>
-                
-                <script>
-                    fetch('https://restcountries.com/v3.1/all')
-                        .then(response => response.json())
-                        .then(data => {
-                            const countrySelect = document.getElementById('country');
-                            data.forEach(country => {
-                                const option = document.createElement('option');
-                                option.value = country.cca2;
-                                option.textContent = country.name.common;
-                                countrySelect.appendChild(option);
-                            });
-                        });
-                </script>
                 <br>
 <p>
 <label for="options">Select the job you are applying for:</label>
@@ -118,5 +102,25 @@
         </div>
         <hr>
     </section>
+    <section id="inflationcalculator">
+
+
+		<h2>2. Kalkulator inflacije</h2>
+
+		<div class="container">
+			<h3>Stopa inflacije: <input type="number" min="0.1" id="inflationRate"> %</h3> <br>
+			<h3>Izračunaj koliko će <input type="number" min="1" id="money"> € da vrijedi za 
+				<input type="number" min="1" id="years"> godina?</h3>
+
+			<button onclick="inflationCalculator()">Izračunaj</button>
+		</div>
+       <br>
+       <hr>
+       <br>
+
+
+
+	<script src="script.js"></script>
+</section>
 </body>
 </html>

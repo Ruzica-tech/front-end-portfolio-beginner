@@ -1,7 +1,25 @@
 body {
     background-color: black;
     color: aliceblue;
+    font-family: fira code;
 }
+
+.navdiv ul{
+    list-style: none;
+    padding: 0px; margin: 0px;
+    text-align: right;
+    padding-right: 40px;
+}
+.navdiv li{
+    display: inline-block;
+}
+.navdiv a{
+    text-decoration: none;
+    width: 100px;
+    display: block;
+    padding: 10px;}
+
+
 
 h1 {
     font-size: 90px;
@@ -9,6 +27,7 @@ h1 {
     font-family: "Fira Code", monospace;
     text-align: center;
 }
+
 
 h2 {
     font-size: 40px;
@@ -44,4 +63,68 @@ hr {
 .TikTok {
     padding-top: 30px;
     padding-bottom: 40px;
+}
+
+button{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #41C256;
+    font-family: fira code;
+    font-weight: normal;
+    color: aliceblue;
+    border-radius: 10px;
+    border-color: azure;
+}
+
+
+h1 {
+text-align: center;
+margin-bottom: 15px;
+}
+
+h2 {
+margin-bottom: 15px;
+}
+
+h3 {
+margin-bottom: 15px;
+}
+
+.container {
+max-width: 800px;
+margin: auto;
+border: 2px solid rgb(56, 173, 81);
+border-radius: 30px;
+background-color: rgba(0, 0, 0, 0.3);
+padding: 20px;
+}
+
+.container input {
+max-width: 80px;
+height: 40px;
+font-size: 18px;
+text-align: center;
+}
+
+.container button {
+padding: 10px;
+font-size: 16px;
+font-weight: bold;
+background-color: orange;
+cursor: pointer;
+border-radius: 10px;
+}
+
+.new-value {
+margin-top: 20px;
+font-size: 20px;
+}
+
+.padding {
+ margin-top: 20px;
+ margin-bottom: 20px;
+ height: 100px;
+background-color: aqua;
 }
